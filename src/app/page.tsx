@@ -1,21 +1,14 @@
 import Link from "next/link";
-import Image from "next/image";
+import { getPublishedArticles } from "@/lib/articles";
+import ArticleCard from "@/components/ArticleCard";
 
 export default function Home() {
+  const recentArticles = getPublishedArticles().slice(0, 2);
+  
   return (
-    <div className="max-w-2xl">
+    <div className="max-w-2xl mx-auto">
       {/* Hero Section */}
-      <div className="mt-24 mb-20">
-        <div className="mb-8">
-          <Image
-            src="/images/profile.jpg"
-            alt="Jeff Pegg"
-            width={256}
-            height={256}
-            className="h-64 w-64 rounded-full object-cover"
-            priority
-          />
-        </div>
+      <div className="mt-24 mb-20 relative">
         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
           Software engineer, AI enthusiast, and creator of digital experiences.
         </h1>
@@ -58,6 +51,26 @@ export default function Home() {
           </Link>
         </div>
       </div>
+
+      {/* Recent Articles Section */}
+      {recentArticles.length > 0 && (
+        <div className="mt-24">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground">Recent Articles</h2>
+            <Link 
+              href="/articles" 
+              className="text-sm font-medium text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300 transition-colors"
+            >
+              View all →
+            </Link>
+          </div>
+          <div className="space-y-16">
+            {recentArticles.map((article) => (
+              <ArticleCard key={article.id} article={article} />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

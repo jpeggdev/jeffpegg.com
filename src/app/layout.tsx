@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Analytics } from '@vercel/analytics/react';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import MicrosoftClarity from '@/components/MicrosoftClarity';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-zinc-50 dark:bg-black transition-colors`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground transition-colors`}
       >
         <ThemeProvider
           attribute="class"
@@ -37,13 +40,13 @@ export default function RootLayout({
         >
           <div className="fixed inset-0 flex justify-center sm:px-8">
             <div className="flex w-full max-w-7xl lg:px-8">
-              <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
+              <div className="w-full bg-card ring-1 ring-border" />
             </div>
           </div>
           <div className="relative flex w-full flex-col">
             <Navigation />
             <main className="flex-auto">
-              <div className="sm:px-8 mt-16 sm:mt-32">
+              <div className="sm:px-8 mt-16 sm:mt-32 mb-16 sm:mb-32">
                 <div className="mx-auto w-full max-w-7xl lg:px-8">
                   <div className="relative px-4 sm:px-8 lg:px-12">
                     <div className="mx-auto max-w-2xl lg:max-w-5xl">
@@ -54,6 +57,11 @@ export default function RootLayout({
               </div>
             </main>
           </div>
+          <Analytics />
+          {process.env.NEXT_PUBLIC_GA_ID && (
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+          )}
+          <MicrosoftClarity />
         </ThemeProvider>
       </body>
     </html>
