@@ -10,12 +10,12 @@ export default function Home() {
       {/* Hero Section */}
       <div className="mt-24 mb-20 relative">
         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-          Software engineer, AI enthusiast, and creator of digital experiences.
+          Software engineer, <span className="text-blue">AI enthusiast</span>, and creator of <span className="text-yellow">digital experiences</span>.
         </h1>
         <p className="mt-6 text-base text-muted-foreground">
-          I&apos;m Jeff Pegg, a software engineer based in the digital frontier. I&apos;m passionate about 
+          I&apos;m <span className="text-blue-dark font-medium">Jeff Pegg</span>, a software engineer based in the digital frontier. I&apos;m passionate about 
           building great software and exploring the transformative potential of artificial intelligence. 
-          I share insights on development, AI trends, and creating tools that make a meaningful impact.
+          I share insights on development, <span className="text-yellow-dark font-medium">AI trends</span>, and creating tools that make a meaningful impact.
         </p>
         <div className="mt-6 flex gap-6">
           <Link
@@ -25,7 +25,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" viewBox="0 0 24 24" aria-hidden="true">
+            <svg className="h-6 w-6 fill-zinc-500 transition group-hover:fill-blue dark:fill-zinc-400 dark:group-hover:fill-blue-light" viewBox="0 0 24 24" aria-hidden="true">
               <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z" />
             </svg>
           </Link>
@@ -45,7 +45,7 @@ export default function Home() {
             className="group -m-1 p-1"
             aria-label="Send email"
           >
-            <svg className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" viewBox="0 0 24 24" aria-hidden="true">
+            <svg className="h-6 w-6 fill-zinc-500 transition group-hover:fill-yellow dark:fill-zinc-400 dark:group-hover:fill-yellow-light" viewBox="0 0 24 24" aria-hidden="true">
               <path fillRule="evenodd" d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z" />
             </svg>
           </Link>
@@ -59,7 +59,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold tracking-tight text-foreground">Recent Articles</h2>
             <Link 
               href="/articles" 
-              className="text-sm font-medium text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300 transition-colors"
+              className="text-sm font-medium text-yellow hover:text-yellow-dark dark:text-yellow-light dark:hover:text-yellow transition-colors"
             >
               View all →
             </Link>

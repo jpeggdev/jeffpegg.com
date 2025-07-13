@@ -11,6 +11,9 @@ export type Article = {
   publishedAt: string;
   status: 'draft' | 'published';
   readTime: number;
+  headerImage?: string;
+  headerImageAlt?: string;
+  headerImageCredit?: string;
 };
 
 const articlesDirectory = path.join(process.cwd(), 'src/content/articles');
@@ -37,6 +40,9 @@ export function getAllArticles(): Article[] {
       publishedAt: data.publishedAt || '',
       status: data.status || 'draft',
       readTime: data.readTime || 0,
+      headerImage: data.headerImage || null,
+      headerImageAlt: data.headerImageAlt || null,
+      headerImageCredit: data.headerImageCredit || null,
     });
   }
 
