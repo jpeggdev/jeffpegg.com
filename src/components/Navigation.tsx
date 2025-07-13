@@ -13,6 +13,7 @@ export default function Navigation() {
   const links = [
     { href: "/about", label: "About" },
     { href: "/articles", label: "Articles" },
+    { href: "/agentops", label: "AgentOps" },
   ];
 
   return (
