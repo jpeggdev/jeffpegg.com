@@ -10,6 +10,9 @@ github_username: jpeggdev
 markdown: kramdown
 permalink: pretty
 
+plugins:
+  - jekyll-sitemap
+
 highlighter: rouge
 kramdown:
   input: GFM
