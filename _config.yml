@@ -1,0 +1,17 @@
+# Site settings
+title: Jeff Pegg
+email:
+description: "Personal blog of Jeff Pegg."
+baseurl: ""
+url: "https://jeffpegg.com"
+github_username: jpeggdev
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
