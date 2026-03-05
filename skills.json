@@ -1,0 +1,24 @@
+{
+  "$schema": "https://unpkg.com/skillman/skills_schema.json",
+  "detected": {
+    "packageManager": null,
+    "frameworks": [],
+    "languages": [
+      "ruby"
+    ],
+    "tools": [],
+    "testing": [],
+    "searchTerms": [
+      "ruby"
+    ],
+    "timestamp": "2026-02-17T00:19:47.290Z"
+  },
+  "skills": [
+    {
+      "source": "aj-geddes/useful-ai-prompts",
+      "skills": [
+        "ruby-rails-application"
+      ]
+    }
+  ]
+}
